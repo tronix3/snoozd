@@ -1,7 +1,7 @@
 # snoozz
 
 <p align="center">
-  <img src="https://i.imgur.com/h6piEH8.png" alt="Snoozz logo"/>
+  <img src="https://imgur.com/0ZTX91M" alt="Snoozd Logo"/>
 </p>
 
 <div align="center">
@@ -11,7 +11,7 @@
 	<a target="_blank" href="https://chrome.google.com/webstore/detail/snoozz-snooze-tabs-window/lklendgldejcnkkaldoggoapclkepgfb">
 		<img src="https://img.shields.io/chrome-web-store/v/lklendgldejcnkkaldoggoapclkepgfb?logo=google-chrome&color=yellow&logoColor=white" alt="Chrome Web Store">
 	</a>
-	<a href="https://github.com/rohanb10/snoozz-tab-snoozing/releases/latest/">
+	<a href="https://github.com/tronix3/snoozd/releases/latest/">
 		<img alt="GitHub Latest Release" src="https://img.shields.io/github/v/release/rohanb10/snoozz-tab-snoozing?label=latest%20release">
 	</a>
 </div>
@@ -32,22 +32,21 @@
 
 A Web Extension to *snoozz* tabs and windows now and have them reopen automatically later.
 
-Check out the [Snoozz.me](https://snoozz.me) website for more features, screenshots, demo gifs, and the privacy policy (spoiler: nothing is tracked)
+Check out the [Snoozd.xyz](https://snoozd.xyz) website for more features, screenshots, demo gifs, and the privacy policy (spoiler: nothing is tracked)
 
 Features:
-- Snooze individual tabs, selected tabs, or full windows in just two clicks
-- Configure keyboard shortcuts and context menu options to snooze tabs even quicker
-- View your currently sleeping and already awoken tabs in the nap room
-- Edit Sleeping Tabs to wake up at a different time, Snooze woken up tabs again
-- Works completely offline - None of your data is transmitted anywhere, and the extension is entirely self contained
+- Snooze tabs, selected tabs, or windows
+- Configure keyboard shortcuts and context menu options to snooze tabs
+- View your current sleeping and previously awoken tabs in the nap room
+- Edit Sleeping Tabs to wake up at a different times, re-snooze tabs already woken
+- Works offline - 0 data is transmitted anywhere or tracked, and the extension is entirely self contained
 
-I initially built this for myself. Had too many tabs open at the end of the day, and didnt want to look at them until work started the next day.
 
-Available on [Chrome](https://chrome.google.com/webstore/detail/snoozz-snooze-tabs-window/lklendgldejcnkkaldoggoapclkepgfb), [Firefox](https://addons.mozilla.org/en-US/firefox/addon/snoozz/), [Edge](https://microsoftedge.microsoft.com/addons/detail/ifofnjpbldmdcbkaalbdgaopphhlopok) and as a custom build for [Safari](https://github.com/rohanb10/snoozz-tab-snoozing/blob/master/docs/safari.md).
+Available on [Chrome](), [Firefox](), [Edge]() and as a custom build for [Safari]().
 
-[Latest Release](https://github.com/rohanb10/snoozz-tab-snoozing/releases/latest/) | [Changelog](https://snoozz.me/changelog) | [Browser Compatibility](https://snoozz.me/compatibility) | [Privacy](https://snoozz.me/privacy)
+[Latest Release](https://github.com/tronix3/snoozd/releases/latest/) | [Changelog](https://snoozd.xyz/changelog) | [Browser Compatibility](https://snoozd.xyz/compatibility) | [Privacy](https://snoozd.xyz/privacy)
 
-Related repos: [Snoozz Website](https://github.com/rohanb10/snoozz-web) | [Snoozz Stats](https://github.com/rohanb10/snoozz-stats)
+Related repos: [Snoozz Stats](https://github.com/rohanb10/snoozz-stats)
 
 
 ## Colours
@@ -56,8 +55,8 @@ Orange: `#F3B845` | Pink: `#DF4E76`
 
 ## License
 
-Snoozz is licensed under the [GNU GPLv3](https://github.com/rohanb10/snoozz-tab-snoozing/blob/master/LICENSE) license.
+Snoozz is licensed under the [GNU GPLv3](https://github.com/tronix3/snoozd/blob/master/LICENSE) license.
 
-Built by [rohan](https://rohan.xyz) in 2020/21
+Forked by [tronix3]() in 2024
 
-[🍺 Buy me a beer](https://www.buymeacoffee.com/rohanb10)
+[🍺 Buy me a beer]()
