@@ -1,7 +1,7 @@
 # snoozz
 
 <p align="center">
-  <img src="https://imgur.com/0ZTX91M" alt="Snoozd Logo"/>
+  <img src="https://i.imgur.com/0ZTX91M.png" alt="Snoozd Logo"/>
 </p>
 
 <div align="center">
