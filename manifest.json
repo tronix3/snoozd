@@ -1,18 +1,18 @@
 {
-	"name": "Snoozd - Snooze Tabs & Windows for later",
+	"name": "Snoozd",
 	"short_name": "Snoozd",
-	"description": "Declutter your browser by snoozing tabs and windows until you need them.",
+	"description": "Free up your resources by snoozing tabs and windows until you need them.",
 	"version": "1.0.0",
-	
+
 	"icons": {
 		"128": "icons/ext-icon-128.png",
 		"48": "icons/ext-icon-48.png",
 		"32": "icons/ext-icon-32.png",
 		"16": "icons/ext-icon-16.png"
 	},
-	"manifest_version": 2,
+	"manifest_version": 3,
 
-	"browser_action": {
+	"action": {
 		"default_popup": "html/popup.html"
 	},
 	"author": "Tronix3",
@@ -20,49 +20,56 @@
 		"page": "html/settings.html",
 		"open_in_tab": true
 	},
-	
+
 	"background": {
-		"scripts": ["scripts/dayjs.min.js", "scripts/common.js", "scripts/poll.js", "scripts/background.js"]
+		"service_worker": "scripts/sw.js"
 	},
-	"offline_enabled": true,
 
 	"permissions": ["alarms", "contextMenus", "idle", "notifications", "storage", "tabs"],
 
-	"web_accessible_resources": ["html/settings.html"],
+	"web_accessible_resources": [{
+		"resources": ["html/settings.html"],
+		"matches": ["https://*.snoozd.xyz/*"]
+	}],
+
+	"content_scripts": [{
+		"matches": ["https://*.snoozd.xyz/*"],
+		"js": ["scripts/snoozd.xyz.js"]
+	}],
 
 	"commands": {
 		"nap-room": {
-			"description": "Show me my sleeping tabs"
+			"description": "Show me snoozing tabs"
 		},
 		"startup": {
 			"description": "Snooze until the next time you launch your browser"
 		},
 		"in-an-hour": {
-			"description": "Snooze for an hour"
+			"description": "Snooze for 1 hour"
 		},
 		"today-morning": {
-			"description": "Snooze till today morning"
+			"description": "Snooze until today morning"
 		},
 		"today-evening": {
-			"description": "Snooze till today evening"
+			"description": "Snooze until today evening"
 		},
 		"tom-morning": {
-			"description": "Snooze till tomorrow morning"
+			"description": "Snooze until tomorrow morning"
 		},
 		"tom-evening": {
-			"description": "Snooze till tomorrow evening"
+			"description": "Snooze until tomorrow evening"
 		},
 		"weekend": {
-			"description": "Snooze till this Saturday"
+			"description": "Snooze until this Saturday"
 		},
 		"monday": {
-			"description": "Snooze till next Monday"
+			"description": "Snooze until Monday"
 		},
 		"week": {
-			"description": "Snooze till one week from now"
+			"description": "Snooze until 1 week from now"
 		},
 		"month": {
-			"description": "Snooze till one month from now"
+			"description": "Snooze until 1 month from now"
 		}
 	}
 }
