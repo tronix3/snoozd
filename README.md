@@ -1,4 +1,4 @@
-# snoozz
+# Snoozd
 
 <p align="center">
   <img src="https://i.imgur.com/0ZTX91M.png" alt="Snoozd Logo"/>
