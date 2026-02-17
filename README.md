@@ -42,7 +42,7 @@ Features:
 - Works offline - 0 data is transmitted anywhere or tracked, and the extension is entirely self contained
 
 
-Available on [Chrome](), [Firefox](), [Edge]() and as a custom build for [Safari]().
+Available on [Chrome](), [Edge](), or [Brave]().
 
 [Latest Release](https://github.com/tronix3/snoozd/releases/latest/) | [Changelog](https://snoozd.xyz/changelog) | [Browser Compatibility](https://snoozd.xyz/compatibility) | [Privacy](https://snoozd.xyz/privacy)
 
