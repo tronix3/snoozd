@@ -124,8 +124,8 @@ async function updateBadge(cachedTabs, cachedBadge) {
 	var tabs = cachedTabs || await getSnoozedTabs();
 	tabs = sleeping(tabs);
 	if (tabs.length > 0 && badge && ['all','today'].includes(badge)) num = badge === 'today' ? today(tabs).length : tabs.length;
-	chrome.browserAction.setBadgeText({text: num > 0 ? num.toString() : ''});
-	chrome.browserAction.setBadgeBackgroundColor({color: '#0072BC'});
+	chrome.action.setBadgeText({text: num > 0 ? num.toString() : ''});
+	chrome.action.setBadgeBackgroundColor({color: '#0072BC'});
 }
 
 /*	OPEN 	*/
@@ -504,7 +504,7 @@ var getFaviconUrl = url => {
 	if (url.indexOf('file://') === 0) return '../icons/file.svg'
 	// return `https://icons.duckduckgo.com/ip3/${getHostname(url)}.ico`
 	// return `https://www.google.com/s2/favicons?sz=64&domain_url=${getHostname(url)}`;
-	return `https://besticon.herokuapp.com/icon?url=${getHostname(url)}&size=32..48..64&fallback_icon_color=${getColorForUrl(getHostname(url)).replace('#', '')}`;
+	return `https://www.google.com/s2/favicons?sz=64&domain_url=${getHostname(url)}`;
 }
 var getColorForUrl = (url = 'snoozd.xyz') => colours[url.split('').map(c => c.charCodeAt(0)).reduce((a, b) => a + b) % 100];
 
@@ -595,11 +595,7 @@ const DEFAULT_OPTIONS = {
 
 var calcObjectSize = obj => SIZES[typeof obj](obj);
 
-var clipboard = text => {
-	var el = Object.assign(document.createElement('textarea'), {innerText: text});
-	document.body.append(el); el.select();
-	document.execCommand('copy'); el.remove();
-}
+var clipboard = text => navigator.clipboard.writeText(text);
 
 var formatSnoozedUntil = t => {
 	if (t.startUp || (t.repeat && t.repeat.type === 'startup')) return `Next ${capitalize(getBrowser())} Launch`;

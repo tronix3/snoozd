@@ -22,7 +22,7 @@
 	},
 
 	"background": {
-		"service_worker": "scripts/sw.js"
+		"service_worker": "scripts/background.js"
 	},
 
 	"permissions": ["alarms", "contextMenus", "idle", "notifications", "storage", "tabs"],

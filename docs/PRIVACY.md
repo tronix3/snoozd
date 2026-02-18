@@ -2,17 +2,16 @@
 
 #### Permissions
 
-Visit the Snoozz website for a more detailed explanation the permissions required:
+Visit the Snoozd website for a more detailed explanation the permissions required:
 
 [https://snoozd.xyz/privacy.html](https://snoozd.xyz/privacy.html)
 
+#### External Services
+
+Snoozd uses Google's public favicon service (`google.com/s2/favicons`) to display website icons for your snoozed tabs. This sends the domain name (not the full URL) of each snoozed tab to Google's servers. No other external requests are made.
+
 #### Data Collection
-Snoozz collects a minimal amount of anonymous tracking data and sends it to an [open source server](https://github.com/rohanb10/snoozz-stats). All data collected can be visualised in full on the [Snoozz Stats](https://snoozd.xyz/privacy.html) page.
 
-The few lines of code used to send this data can be found in the [`./scripts/poll.js`](https://github.com/rohanb10/snoozz-tab-snoozing/blob/master/scripts/poll.js). The data is initially sent from the `displayPreviewAnimation(...)` function in [`./scripts/popup.js`](https://github.com/rohanb10/snoozz-tab-snoozing/blob/master/scripts/popup.js) to [`./scripts/background.js`](https://github.com/rohanb10/snoozz-tab-snoozing/blob/master/scripts/background.js) using the WebExtension Runtime API `runtime.sendMessage(...)`. It is processed in the background so that the speed of the extension is not compromised in any way
+No tracking or analytics data is collected. All your snoozed tab data (URLs, titles, snooze times) is stored locally in your browser using the `storage.local` API and is never sent to any server.
 
-No other data is collected. Your snoozed urls, geolocations, ip addresses and even languages have never, and will never be used in any way.
-
-You can open your Network tab in your Browser inspector and see exactly what is being sent to the server. If you snooze a tab for monday at 4:15pm, the string `monday.1615` will be sent over to the server. That's it.
-
-You may turn this off on the settings page of your extension.
+Your snoozed URLs, geolocations, IP addresses and languages have never, and will never be used in any way.
